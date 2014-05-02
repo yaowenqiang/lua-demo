@@ -3,8 +3,10 @@ function getRandomNumber(maxValue)
     math.random()
     return math.random(maxValue)
 end
-function handleGuesses(...)
-    lowMessage,highMessage,number = ...
+function handleGuesses(lowMessage,highMessage,number)
+--function handleGuesses(...)
+    --lowMessage,highMessage,number = ...
+    --lowMessage,highMessage,number = ...
     while answer ~= number do
         local answer = io.read('*n') --Read input from user as a number
         --print(answer)
