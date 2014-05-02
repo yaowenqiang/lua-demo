@@ -11,6 +11,8 @@ while answer ~= number do
     elseif answer > number then
         print "Too High"
     else 
-        print "You got it"
+        break
     end
+    print "Guess again"
 end
+print "You got it"
