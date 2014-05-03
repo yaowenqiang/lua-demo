@@ -1,4 +1,4 @@
-local grade = {}
+local grade = {Marry = "100",Teacher="100"}
 while true do
     print "Enter student name (q to quit)"
     local name = io.read()
@@ -14,3 +14,4 @@ for k, v in pairs(grade) do
     print "Grade:"
     print(k,v)
 end
+--print(grade.Teacher)
