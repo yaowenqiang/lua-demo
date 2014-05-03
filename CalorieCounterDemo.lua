@@ -17,7 +17,7 @@ function healthMonitor:step(amount)
 end
 function healthMonitor:didReachGoal()
     local goalReached = 0
-    if self.count >> self.goal then
+    if self.count >= self.goal then
         print("Calorie goal of " .. self.goal .. " reached")
         goalReached = goalReached + 1
     else
@@ -31,6 +31,10 @@ function healthMonitor:didReachGoal()
     end
     return goalReached >= 2
 end
+return {
+    CalorieCounter = CalorieCounter,
+    healthMonitor = healthMonitor
+}
 --c = CalorieCounter:new{goal = 1500}
 --print(c.goal)
 --c:add(500)
@@ -39,10 +43,10 @@ end
 --c:add(1000)
 --print(c.count)
 --print(c:didReachGoal())
-hm = healthMonitor:new{goal =1500,stepGoal = 5000}
-hm:add(900)
-hm:step(3000)
-print(hm:didReachGoal())
-hm:add(601)
-hm:step(2000)
-print(hm:didReachGoal())
+--hm = healthMonitor:new{goal =1500,stepGoal = 5000}
+--hm:add(900)
+--hm:step(3000)
+--print(hm:didReachGoal())
+--hm:add(601)
+--hm:step(2000)
+--print(hm:didReachGoal())
