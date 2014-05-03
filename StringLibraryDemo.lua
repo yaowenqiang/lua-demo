@@ -279,6 +279,10 @@ text = [[
 --b,e = text:find("div")
 --print(b,e)
 --print(string.sub(text,b,e))
-b,e = text:find("<.->")
-print(string.sub(text,b,e))
+--b,e = text:find("<.->")
+--print(string.sub(text,b,e))
 
+--print(text:match("<.->"))
+for tag in string.gmatch(text,"<.->") do
+    print("Found",tag)
+end
