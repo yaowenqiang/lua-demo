@@ -6,5 +6,12 @@ function ss.new(s)
     setmetatable(superstring,meta)
     return superstring
 end
+function ss.add(s1,s2)
+    return s1.s .. s2.s
+end
+meta.__add = ss.add
+
 firstname = ss.new("Bill")
-print(firstname.s)
+lastname = ss.new("Gates")
+print(firstname + lastname)
+--print(firstname.s)
