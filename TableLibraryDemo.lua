@@ -1,3 +1,5 @@
+--[[
+
 stack = {}
 table.insert(stack,32)
 print(unpack(stack))
@@ -16,3 +18,7 @@ table.remove(queue)
 print(unpack(queue))
 table.remove(queue)
 print(unpack(queue))
+--]]
+list  = {1,3,5,6,6,5,4,2,7,8,9,0}
+table.sort(list)
+print(unpack(list))
